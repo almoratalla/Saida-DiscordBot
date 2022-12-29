@@ -1,0 +1,56 @@
+{
+    "id": "schematics",
+    "commands": [
+        {
+            "name": "create",
+            "type": "command",
+            "description": "Creates a schematic",
+            "aliases": ["c", "cr", "crt"],
+            "choices": ["command", "event", "handler", "command category"],
+            "schematics": [
+                {
+                    "name": "command",
+                    "type": "schematics",
+                    "description": "Creates a new command",
+                    "aliases": ["c", "cmd"],
+                    "category": ["core", "music"]
+                },
+                {
+                    "name": "event",
+                    "type": "schematics",
+                    "description": "Creates a new event",
+                    "aliases": ["e", "ev", "evt"],
+                    "category": ["client", "guild"]
+                },
+                {
+                    "name": "handler",
+                    "type": "schematics",
+                    "description": "Creates a new handler",
+                    "aliases": ["h", "hnd", "hndlr"]
+                }
+            ]
+        }
+    ],
+    "create": {
+        "name": "create",
+        "type": "command",
+        "description": "Creates a schematic",
+        "aliases": ["c", "cr", "crt"],
+        "schematics": [
+            {
+                "name": "command",
+                "description": "Creates a new command",
+                "aliases": ["c", "cmd"],
+                "category": ["core", "music"]
+            }
+        ]
+    },
+    "command": {
+        "name": "command",
+        "type": "schematics",
+        "description": "Creates a new command",
+        "aliases": ["c", "cmd"],
+        "category": ["core", "music"],
+        "initializer": "create"
+    }
+}

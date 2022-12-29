@@ -1,0 +1,18 @@
+import { ApplicationCommandType, SlashCommandBuilder } from "discord.js";
+import { Command, SlashCommand } from "../../types";
+
+const COMMAND_NAME = "<%= cmd %>";
+
+export const command: Command | SlashCommand = {
+    name: COMMAND_NAME,
+    description: "<%= desc %>",
+    aliases: [],
+    cooldown: <%= cooldown %>,
+    data: new SlashCommandBuilder()
+        .setName(COMMAND_NAME)
+        .setDescription("<%= slashDesc %>"),
+    execute: async (event: any) => {
+    }
+};
+
+export default command;
